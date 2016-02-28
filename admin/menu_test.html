@@ -1,0 +1,54 @@
+<html>
+<head>
+<title>- NorrisHarps.com -</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<LINK REL=stylesheet HREF="../norris.css" TYPE="text/css">
+<script language="JavaScript">
+<!--
+
+function setCategory() {
+  document.add_edit.catergory.value = document.add_edit.catergorymenu.value;
+}
+
+//-->
+</script>
+</head>
+
+<body>
+
+     
+	<h2>Add an accessory</h2>
+
+	<form method="post" action="http://127.0.0.1/cgi-bin/norris_add.cgi" name="add_edit">
+	<table>
+	<tr>
+	  <td width=200><p>Item name</p></td>
+	  <td><input type="text" name="itemname"></td>
+	</tr>
+	<tr>
+		<td><p>Cost per unit (£)</p></td>
+		<td><input type="text" name="itemcost" maxlength="7"></td>
+	</tr>
+	<tr>
+		<td><p>Catergory</p></td>
+		<td><input type="text" name="catergory"></td>
+	</tr>
+	<tr>
+		<td><p>set</td>
+		<td>
+			<select name="catergorymenu" onChange="setCategory()">
+				<option value="">---</option>
+				<option value="animal">animal</option>
+				<option value="bird">bird</option>
+				<option value="fish">fish</option>
+			</select>
+		</td>
+	</tr>
+	</table>  	
+		<p class="center"> 
+		<input type="submit" name="submit" value="set">
+		</p>
+	</form>
+
+</body>
+</html>
